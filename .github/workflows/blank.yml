@@ -36,7 +36,7 @@ jobs:
       - name: Deploying
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
-          server: ns80.hostgator.mx
+          server: ftp.amongcode.com
           username: ${{ secrets.ftp_ionic_username }}
           password: ${{ secrets.ftp_ionic_password }}
           server-dir: /ionic.test.amongcode.com/
