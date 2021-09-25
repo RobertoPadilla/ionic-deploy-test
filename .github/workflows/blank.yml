@@ -40,6 +40,6 @@ jobs:
           username: ${{ secrets.ftp_ionic_username }}
           password: ${{ secrets.ftp_ionic_password }}
           exclude:
-            - **/e2e/**
-            - **/src/**
+            - '**/e2e/**'
+            - '**/src/**'
           server-dir: /ionic.test.amongcode.com/
