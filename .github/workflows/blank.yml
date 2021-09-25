@@ -52,7 +52,7 @@ jobs:
       - name: list folders
         run: ls -l
 
-      Get www folder and copy to hosting
+      # Get www folder and copy to hosting
       - name: Deploying
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
