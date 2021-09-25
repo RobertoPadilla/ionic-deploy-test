@@ -39,5 +39,5 @@ jobs:
           server: ftp.amongcode.com
           username: ${{ secrets.ftp_ionic_username }}
           password: ${{ secrets.ftp_ionic_password }}
-          exclude: /e2e/** /src/**
+          exclude: .github** .github*/** node_modules** node_modules*/** resources/js** resources/js*/** resources/css** resources/css*/** resources/sass* resources/sass*/** Workspace* Workspace*/** .vscode* .vscode*/** .gitignore* .gitignore*/**  .gitattributes* .gitattributes*/** e2e** e2e/** src** src/**
           server-dir: /ionic.test.amongcode.com/
