@@ -40,9 +40,9 @@ jobs:
           username: ${{ secrets.ftp_ionic_username }}
           password: ${{ secrets.ftp_ionic_password }}
           server-dir: /ionic.test.amongcode.com/
-          exclude:
-            - **/.git*
-            - **/.git*/**
-            - **/node_modules/**
-            - **/e2e/**
-            - **/src/**
+          # exclude:
+            # - **/.git*
+            # - **/.git*/**
+            # - **/node_modules/**
+            # - **/e2e/**
+            # - **/src/**
