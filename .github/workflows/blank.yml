@@ -34,10 +34,15 @@ jobs:
 
       # Get www folder and copy to hosting
       - name: Deploying
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
           server: ftp.amongcode.com
           username: ${{ secrets.ftp_ionic_username }}
           password: ${{ secrets.ftp_ionic_password }}
           server-dir: /ionic.test.amongcode.com/
-          exclude: [ /.git*, /.git*/**, /node_modules/**, /e2e/**, /src/** ]
+          exclude:
+            - **/.git*
+            - **/.git*/**
+            - **/node_modules/**
+            - **/e2e/**
+            - **/src/**
