@@ -38,16 +38,25 @@ jobs:
         run: rm -R src
       - name: Remove trash files
         run: rm -R e2e
+      - name: Remove trash files
+        run: rm -R .git
+      - name: Remove trash files
+        run: rm -R .github
+      - name: Remove trash files
+        run: rm *.js
+      - name: Remove trash files
+        run: rm *.json
+      - name: Remove trash files
+        run: rm .*
 
       - name: list folders
         run: ls -l
 
-      # Get www folder and copy to hosting
-      # - name: Deploying
-      #   uses: SamKirkland/FTP-Deploy-Action@4.1.0
-      #   with:
-      #     server: ftp.amongcode.com
-      #     username: ${{ secrets.ftp_ionic_username }}
-      #     password: ${{ secrets.ftp_ionic_password }}
-      #     server-dir: /ionic.test.amongcode.com/
-      #     exclude: .github** .github*/** **/node_modules** node_modules** e2e** .git** **/.github** node_modules node_modules*/** resources/js** resources/js*/** resources/css** resources/css*/** resources/sass* resources/sass*/** Workspace* Workspace*/** .vscode* .vscode*/** .gitignore* .gitignore*/**  .gitattributes* .gitattributes*/** e2e** e2e/** src** src/**
+      Get www folder and copy to hosting
+      - name: Deploying
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        with:
+          server: ftp.amongcode.com
+          username: ${{ secrets.ftp_ionic_username }}
+          password: ${{ secrets.ftp_ionic_password }}
+          server-dir: /ionic.test.amongcode.com/
