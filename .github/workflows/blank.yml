@@ -33,7 +33,11 @@ jobs:
         run: ionic build --prod
       
       - name: Remove trash files
-        run: find . -type f -not -name 'www/*' -delete
+        run: rm -R node_modules
+      - name: Remove trash files
+        run: rm -R src
+      - name: Remove trash files
+        run: rm -R e2e
 
       - name: list folders
         run: ls -l
