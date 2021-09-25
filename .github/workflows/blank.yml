@@ -46,8 +46,6 @@ jobs:
         run: rm *.js
       - name: Remove trash files
         run: rm *.json
-      - name: Remove trash files
-        run: rm .*
 
       - name: list folders
         run: ls -l
